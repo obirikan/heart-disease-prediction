@@ -22,7 +22,7 @@ y=np.array(dependent)
 
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x, y, test_size=0.09)
 
-
+'''''''''
 best=0
 #testing and training using actual data to know correlation btn them
 #test_size is the percentage used for testing the remaining goes to training
@@ -38,14 +38,12 @@ for _ in range(1000):
     #test the accuracy of the error
     acc=linear.score(x_test,y_test)
 
-    #printing out some values for verification
-    #test model accuracy level
-
 
     if acc>best:
         best=acc
         with open('heartprediction.pickle','wb') as f:
            pickle.dump(linear,f)
+'''''''''
 
 savedmodel=open('heartprediction.pickle', 'rb')
 newmodel=pickle.load(savedmodel)
