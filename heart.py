@@ -49,7 +49,7 @@ savedmodel=open('heartprediction.pickle', 'rb')
 newmodel=pickle.load(savedmodel)
 
 
-myvalues=[[149,14345,1]]
+myvalues=[[20,14,1,]]
 
 predicted=newmodel.predict(x_test)
 names=['absense','presence']
